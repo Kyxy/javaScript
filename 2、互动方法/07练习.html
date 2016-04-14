@@ -1,0 +1,27 @@
+	<!DOCTYPE html>
+<html>
+ <head>
+  <title> new document </title>  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>   
+  <script type="text/javascript">  
+    function openWindow(){
+        var myConfirm=confirm("是否打开新建窗口？");// 新窗口打开时弹出确认框，是否打开
+        	if(myConfirm == true)
+    			{
+    				var url;
+    				url=prompt("确定打开的网址?", "http://www.imooc.com/");   //注意这个冒号...千万不要在中文输入法下输入！！！
+    				window.open(url, "_blank", "width=400px, height=500px, menubar=yes, toolbar=yes, scrollbars=yes");
+    			}// 通过输入对话框，确定打开的网址，默认为 http：//www.imooc.com/
+    		else
+    			{
+    				alert("打开网页失败");
+    			}
+    //打开的窗口要求，宽400像素，高500像素，无菜单栏、无工具栏。
+    
+    }
+  </script> 
+ </head> 
+ <body> 
+	  <input type="button" value="新窗口打开网站" onclick="openWindow()" /> 
+ </body>
+</html>
